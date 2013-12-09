@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Manager</title>
+	<link href="Content/bootstrap.min.css" rel="stylesheet" />
+	<link href="Content/bootstrap-responsive.min.css" rel="stylesheet" />
+	<link href="Content/styles.css" rel="stylesheet" />
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body ng-cloak="">
+	<div class="navbar navbar-fixed-top" data-ng-controller="NavbarCtrl">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand " href="#/">
+					<img src="Content/Images/logo.png" alt="logo">
+					{{ appTitle }}
+				</a>
+				<ul class="nav nav-pills">
+					<li ng-class="{'active':highlight('/agents')}"><a href="#/agents">Agents</a></li>
+					<li ng-class="{'active':highlight('/assets')}"><a href="#/assets">Assets</a></li>
+					<li ng-class="{'active':highlight('/charts')}"><a href="#/charts">Analytics</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div data-ng-view="" id="ng-view" data-ng-animate="{enter: 'view-enter'}"></div>
+
+	<div id="footer">
+		<div class="navbar navbar-fixed-bottom">
+			<div class="navbar-inner">
+				<div class="container">
+					<footer>
+						<div class="row">
+							<div class="span4">
+								Created by George Nikolaropoulos
+							</div>
+							<div class="span4">
+								Twitter: <a href="http://twitter.com/gnikolaropoulos">@gnikolaropoulos</a>
+							</div>
+							<div class="span4">
+								Blog: <a href="http://softwarebytes.blogspot.com">Stories of Software Design</a>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 3rd party libraries -->
+	<script src="/Scripts/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+	<script src="/Scripts/bootstrap.min.js"></script>
+	<script src="/Scripts/q.min.js"></script>
+	<script src="https://www.google.com/jsapi"></script>
+
+	<!-- Load custom scripts via RequireJS -->
+	<script src="/Scripts/require.js" data-main="/Scripts/main.js"></script>
+
+	<!-- 
+	<script src="app/app.js"></script>
+	<script src="app/controllers/customerOrdersController.js"></script>
+	<script src="app/controllers/customersController.js"></script>
+	<script src="app/controllers/navBarController.js"></script>
+	<script src="app/controllers/orderChildController.js"></script>
+	<script src="app/controllers/ordersController.js"></script>
+	<script src="app/services/agentsService.js"></script>
+	<script src="app/services/customersBreezeService.js"></script>
+	<script src="app/services/dataService.js"></script>
+	<script src="app/services/config.js"></script>
+	<script src="app/directives/animatedView.js"></script>
+	-->
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<div class="agentOrders view">
+    <div class="container">
+        <header>
+            <h3>Agent Contracts</h3>
+        </header>
+        <div>
+            <div class="row indent">
+                <div class="span12">
+                    <div>
+                        <h4>Contracts for {{ agent.firstName + ' ' + agent.lastName }}</h4>
+                        {{agent.address}}
+                        <br />
+                        {{agent.city}}
+                        <br /><br />
+                    </div>
+                    <div data-ng-include="'/app/views/assets/assetsTable.html'" />
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>

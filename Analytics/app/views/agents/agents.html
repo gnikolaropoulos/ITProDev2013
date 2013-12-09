@@ -1,0 +1,28 @@
+﻿<div class="agents view">
+    <div class="container">
+        <header>
+            <h2>Agents</h2>
+        </header>
+        <div>
+            <div class="row cardContainer indent">
+                <div class="span3"
+                    data-ng-repeat="agent in agents | orderBy:'lastName'" 
+                    data-ng-animate="{leave:'list-leave', enter:'list-enter'}">
+                    <div class="cardHeader">{{agent.firstName + ' ' + agent.lastName}}</div>
+                    <div class="cardBody">
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <img data-ng-src="/Content/Images/{{agent.gender}}.png" class="cardImage" />
+                            </div>
+                            <div class="pull-left cardBodyRight">
+                                <div>{{agent.address}}</div>
+                                <div>{{agent.city}} </div>
+                                <div><a href="#/agentAssets/{{agent.id}}" class="btn-link">{{ agent.assetsCount }} Assets</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
